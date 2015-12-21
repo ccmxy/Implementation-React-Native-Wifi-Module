@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "react-native": "^0.16.0",
-    "react-native-wifi-module": "^1.0.9"
+    "react-native-wifi-module": "^1.0.9",
+    "react-timer-mixin": "^0.13.3"
   }
 }

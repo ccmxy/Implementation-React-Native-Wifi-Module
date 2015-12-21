@@ -78,16 +78,19 @@ var AndroidWifiReactNative = React.createClass({
   checkConnectionStatus: function() {
     wifiModule.connectionStatus((isConnected) => {
       if (isConnected) {
-        this.navigateToAction();
+        this.showConnected();
       }
     },
   );
   },
 
-  navigateToAction: function() {
+  showConnected: function() {
     clearInterval(this.checkConnectionTimer);
     clearInterval(this.connectionFailureTimer);
-    this.setState({connected: true})
+    this.setState({
+      connected: true,
+      loading: false
+    });
   },
 
   alertConnectionFailure: function() {
